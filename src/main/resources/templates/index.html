@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCHA</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/TextPlugin.min.js"></script>
+    <script src="js/rotateBanner.js"></script>
+    <script src="js/infiniteslidev2.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <h1><a href="index.html"><img src="images/watcha_logo.svg" alt="wave_logo"></a></h1>
+    </div>
+    <div class="hamWrap">
+        <div class="ham">
+            <a href="#void">
+                <div class="hamBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="hamText">
+                    <span>MENU</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+<nav>
+    <ul id="nav">
+        <li><a href="#void">로그인</a></li>
+        <li><a href="#void">회원가입</a></li>
+        <li><a href="#void">홈</a></li>
+        <li><a href="#void">찾기</a></li>
+        <li><a href="#void">보관함</a></li>
+    </ul>
+</nav>
+
+<div class="bg"></div>
+
+<div id="mainBanner">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_03.jpg" alt="banner5"></a>
+                <div class="textBox">
+                    <p>하우스 오브 드래곤</p>
+                    <p>불이 군림한다</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_02.jpg" alt="banner2"></a>
+                <div class="textBox">
+                    <p>오늘의 웹툰</p>
+                    <p>괜찮아, 잘 하고 있어 내 인생!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_003.jpg" alt="banner3"></a>
+                <div class="textBox">
+                    <p>빅마우스</p>
+                    <p>미궁 속으로 빠져드는 그의 정체</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_004.jpg" alt="banner4"></a>
+                <div class="textBox">
+                    <p>징크스의 연인</p>
+                    <p>내가 본 미래, 반드시 바꿀거야</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_04.jpg" alt="banner1"></a>
+                <div class="textBox">
+                    <p>피는 물보다 진하다</p>
+                    <p>피로 얼룩진 운명, 그 끝은?</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_05.jpg" alt="banner7"></a>
+                <div class="textBox">
+                    <p>미남당</p>
+                    <p>검은 세력의 우두머리를 찾아서</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <a href="#void"><img src="images/main_banner_006.jpg" alt="banner6"></a>
+                <div class="textBox">
+                    <p>반지의 제왕</p>
+                    <p>장엄한 역사의 판타지</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div id="container">
+    <div class="section1">
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#void"><img src="images/movie_01.jpg" alt="1"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/movie_02.jpg" alt="2"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/movie_03.jpg" alt="3"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/movie_04.jpg" alt="4"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/drama_01.jpg" alt="5"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/drama_02.jpg" alt="6"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/drama_03.jpg" alt="7"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/drama_04.jpg" alt="8"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/variety_001.jpg" alt="9"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/variety_002.jpg" alt="10"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/variety_003.jpg" alt="11"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/variety_004.jpg" alt="12"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ani_poster_01.jpg" alt="13"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ani_poster_02.jpg" alt="14"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ani_poster_03.jpg" alt="15"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ani_poster_04.jpg" alt="16"></a></div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination2"></div>
+        <a href="#void">더보기 &gt</a>
+    </div>
+
+    <div class="originalsWrap">
+        <h2>지금 감상해보세요</h2>
+        <ul class="navigation">
+            <li class="navigation-item active">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_001.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_002.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_003.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_004.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_005.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_006.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_007.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_008.jpg);"></span>
+            </li>
+            <li class="navigation-item">
+                <span class="rotate-holder"></span>
+                <span class="background-holder"
+                      style="background-image: url(images/waveori_poster_009.jpg);"></span>
+            </li>
+        </ul>
+
+        <div class="detail">
+
+            <div class="detail-item active">
+                <div class="headline">모범택시</div>
+                <div class="background" style="background-image: url(images/waveori_background_001.jpg); height: 100vh;"></div>
+                <div class="poster"><a href="#void"><img src="images/now_poster_001.jfif" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">검은태양</div>
+                <div class="background" style="background-image: url(images/waveori_background_002.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_002.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">경찰수업</div>
+                <div class="background" style="background-image: url(images/waveori_background_003.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_003.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">유 레이즈 미 업</div>
+                <div class="background" style="background-image: url(images/waveori_background_004.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_004.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">원더우먼</div>
+                <div class="background" style="background-image: url(images/waveori_background_005.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_005.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">엉클</div>
+                <div class="background" style="background-image: url(images/waveori_background_006.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_006.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">꽃피면 달생각하고</div>
+                <div class="background" style="background-image: url(images/waveori_background_007.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_007.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">트레이서</div>
+                <div class="background" style="background-image: url(images/waveori_background_008.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_008.jpg" alt="poster1"></a></div>
+            </div>
+            <div class="detail-item">
+                <div class="headline">악의 마음을 읽는 자들</div>
+                <div class="background" style="background-image: url(images/waveori_background_009.jpg);"></div>
+                <div class="poster"><a href="#void"><img src="images/waveori_poster_009.jpg" alt="poster1"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_001.jpg" alt="1"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_002.jpg" alt="2"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_003.jpg" alt="3"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_004.jpg" alt="4"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_001.jpg" alt="5"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_002.jpg" alt="6"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_003.jpg" alt="7"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_004.jpg" alt="8"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_001.jpg" alt="9"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_002.jpg" alt="10"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_003.jpg" alt="11"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_004.jpg" alt="12"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_001.jpg" alt="13"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_002.jpg" alt="14"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_003.jpg" alt="15"></a></div>
+                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_004.jpg" alt="16"></a></div>
+
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination3"></div>
+        <a href="#void">더보기 &gt</a>
+    </div>
+
+    <div class="scrollBanner">
+        <div class="lineWrap">
+            <ul class="line1">
+                <li><img src="images/line1/line_01_001.jpg" alt="line_01_001"></li>
+                <li><img src="images/line1/line_01_002.jpg" alt="line_01_002"></li>
+                <li><img src="images/line1/line_01_003.jpg" alt="line_01_003"></li>
+                <li><img src="images/line1/line_01_004.jpg" alt="line_01_004"></li>
+                <li><img src="images/line1/line_01_005.jpg" alt="line_01_005"></li>
+                <li><img src="images/line1/line_01_006.jpg" alt="line_01_006"></li>
+                <li><img src="images/line1/line_01_007.jpg" alt="line_01_007"></li>
+                <li><img src="images/line1/line_01_008.jpg" alt="line_01_008"></li>
+                <li><img src="images/line1/line_01_009.jpg" alt="line_01_009"></li>
+                <li><img src="images/line1/line_01_010.jpg" alt="line_01_010"></li>
+                <li><img src="images/line1/line_01_011.jpg" alt="line_01_011"></li>
+                <li><img src="images/line1/line_01_012.jpg" alt="line_01_012"></li>
+                <li><img src="images/line1/line_01_013.jpg" alt="line_01_013"></li>
+                <li><img src="images/line1/line_01_014.jpg" alt="line_01_014"></li>
+                <li><img src="images/line1/line_01_015.jpg" alt="line_01_015"></li>
+                <li><img src="images/line1/line_01_016.jpg" alt="line_01_016"></li>
+                <li><img src="images/line1/line_01_017.jpg" alt="line_01_017"></li>
+                <li><img src="images/line1/line_01_018.jpg" alt="line_01_018"></li>
+                <li><img src="images/line1/line_01_019.jpg" alt="line_01_019"></li>
+                <li><img src="images/line1/line_01_020.jpg" alt="line_01_020"></li>
+                <li><img src="images/line1/line_01_021.jpg" alt="line_01_021"></li>
+                <li><img src="images/line1/line_01_022.jpg" alt="line_01_022"></li>
+                <li><img src="images/line1/line_01_023.jpg" alt="line_01_023"></li>
+                <li><img src="images/line1/line_01_024.jpg" alt="line_01_024"></li>
+                <li><img src="images/line1/line_01_025.jpg" alt="line_01_025"></li>
+                <li><img src="images/line1/line_01_026.jpg" alt="line_01_026"></li>
+            </ul>
+        </div>
+
+        <div class="parallaxBanner" data-parallax="scroll" data-image-src="images/parallax_background.JPG"><span>이동 중에도 감상을 멈추지 마세요</span></div>
+        <div class="lineWrap">
+            <ul class="line2">
+                <li><img src="images/line2/line_02_001.jpg" alt="line_02_001"></li>
+                <li><img src="images/line2/line_02_002.jpg" alt="line_02_002"></li>
+                <li><img src="images/line2/line_02_003.jpg" alt="line_02_003"></li>
+                <li><img src="images/line2/line_02_004.jpg" alt="line_02_004"></li>
+                <li><img src="images/line2/line_02_005.jpg" alt="line_02_005"></li>
+                <li><img src="images/line2/line_02_006.jpg" alt="line_02_006"></li>
+                <li><img src="images/line2/line_02_007.jpg" alt="line_02_007"></li>
+            </ul>
+        </div>
+        <ul class="line3">
+            <li><img src="images/line3/line_03_001.jpg" alt="line_03_001"></li>
+            <li><img src="images/line3/line_03_002.jpg" alt="line_03_002"></li>
+            <li><img src="images/line3/line_03_003.jpg" alt="line_03_003"></li>
+            <li><img src="images/line3/line_03_004.jpg" alt="line_03_004"></li>
+            <li><img src="images/line3/line_03_005.jpg" alt="line_03_005"></li>
+            <li><img src="images/line3/line_03_006.jpg" alt="line_03_006"></li>
+            <li><img src="images/line3/line_03_007.jpg" alt="line_03_007"></li>
+            <li><img src="images/line3/line_03_008.jpg" alt="line_03_008"></li>
+            <li><img src="images/line3/line_03_009.jpg" alt="line_03_009"></li>
+            <li><img src="images/line3/line_03_010.jpg" alt="line_03_010"></li>
+            <li><img src="images/line3/line_03_011.jpg" alt="line_03_011"></li>
+            <li><img src="images/line3/line_03_012.jpg" alt="line_03_012"></li>
+            <li><img src="images/line3/line_03_013.jpg" alt="line_03_013"></li>
+            <li><img src="images/line3/line_03_014.jpg" alt="line_03_014"></li>
+            <li><img src="images/line3/line_03_015.jpg" alt="line_03_015"></li>
+            <li><img src="images/line3/line_03_016.jpg" alt="line_03_016"></li>
+            <li><img src="images/line3/line_03_017.jpg" alt="line_03_017"></li>
+            <li><img src="images/line3/line_03_018.jpg" alt="line_03_018"></li>
+            <li><img src="images/line3/line_03_019.jpg" alt="line_03_019"></li>
+            <li><img src="images/line3/line_03_020.jpg" alt="line_03_020"></li>
+            <li><img src="images/line3/line_03_021.jpg" alt="line_03_021"></li>
+            <li><img src="images/line3/line_03_022.jpg" alt="line_03_022"></li>
+            <li><img src="images/line3/line_03_023.jpg" alt="line_03_023"></li>
+            <li><img src="images/line3/line_03_024.jpg" alt="line_03_024"></li>
+            <li><img src="images/line3/line_03_025.jpg" alt="line_03_025"></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <div class="innerBox">
+        <ul class="ftTop">
+            <li><a href="#void">왓챠피디아 서비스 이용약관</a></li>
+            <li><a href="#void">개인정보 처리 방침</a></li>
+            <li><a href="#void">왓챠 서비스 이용약관</a></li>
+            <li><a href="#void">고객센터</a></li>
+            <li><a href="#void">채용정보</a></li>
+        </ul>
+        <div class="ftBottom">
+            <ul>
+                <li>주식회사 왓챠</li>
+                <li>대표 박태훈</li>
+                <li>서울특별시 서초구 강남대로 343 신덕빌딩 3층</li>
+            </ul>
+            <ul>
+                <li>사업자등록번호 211-88-66013</li>
+                <li>통신판매업 신고번호 제 2019-서울서초-0965호</li>
+            </ul>
+        </div>
+        <p>Copyright © 2022 by Watcha, Inc. All rights reserved.</p>
+    </div>
+
+</footer>
+</body>
+</html>
