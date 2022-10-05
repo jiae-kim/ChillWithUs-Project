@@ -92,4 +92,5 @@ $(function(){
       'clone': 3,
       'speed': 100
     });
+
 })

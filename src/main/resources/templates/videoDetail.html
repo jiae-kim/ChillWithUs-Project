@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
     <style>
         .search {
             position: relative;
@@ -50,10 +51,14 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .preview_div{
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
     </style>
 </head>
 <body>
-<div th:insert="~{menubar :: menubar}"></div>
+<div th:insert="~{views/common/menubar :: menubar}"></div>
 
 <div class="bg"></div>
 
@@ -61,11 +66,36 @@
     <div class="swiper mySwiper" style="width:60%; height:90%">
         <div class="swiper-wrapper" style="margin-top: 70px;">
             <div class="swiper-slide">
-                <iframe width="1000" height="715" src="https://www.youtube.com/embed/on09zv-ujyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="preview_div">
+                    <iframe class="video" width="1000" height="715" src="https://www.youtube.com/embed/on09zv-ujyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // 마우스 진입 이벤트
+    $(document).on('mouseenter', '.preview_div', function(){
+        var video = document.getElementsByClassName('video');
+        console.log(video);
+        // 재생버튼 감추기
+        //$(this).find('img').hide();
+        // 썸네일 이미지를 gif 이미지로 변경
+        //$(this).css('background-image', 'url(https://www.youtube.com/embed/on09zv-ujyc)');
+        //video.play()
+    }/*, false*/);
+    // 마우스 아웃 이벤트
+    $(document).on('mouseleave', '.preview_div', function(){
+        var video = document.getElementsByClassName('video');
+        console.log(video);
+        // 재생버튼 보이기
+        //$(this).find('img').show();
+        // gif 이미지를 썸네일 이미지로 변경
+        //$(this).css('background-image', 'url(https://www.youtube.com/embed/on09zv-ujyc)');
+        //video.pause()
+    }/*, false*/);
+</script>
 
 <div id="container" style="margin-bottom: -150px;">
     <div class="section1" style="background-color: rgb(34, 34, 34); width: 100%; height: 100%; margin-top: -150px;">
@@ -244,6 +274,6 @@
 
 </div>
 
-<div th:insert="~{footer :: footer}"></div>
+<div th:insert="~{views/common/footer :: footer}"></div>
 </body>
 </html>
