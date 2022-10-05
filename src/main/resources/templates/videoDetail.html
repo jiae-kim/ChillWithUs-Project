@@ -40,13 +40,15 @@
         }
         .pagination {
             display: inline-block;
+            font-size: 15px;
+            width: 35%;
         }
         .pagination a {
             color: white;
             float: left;
             padding: 8px 16px;
             text-decoration: none;
-            font-weight: bold
+            font-weight: bold;
         }
     </style>
 </head>
@@ -59,8 +61,7 @@
     <div class="swiper mySwiper" style="width:60%; height:90%">
         <div class="swiper-wrapper" style="margin-top: 70px;">
             <div class="swiper-slide">
-                <!--<img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" width="20" height="10" alt="">-->
-                <iframe width="1560" height="615" src="https://www.youtube.com/embed/on09zv-ujyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1000" height="715" src="https://www.youtube.com/embed/on09zv-ujyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -99,14 +100,26 @@
             <div class="epi" style="display: grid;">
                 <!--에피소드 한개-->
                 <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
-                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="sec1-2-font">
+                    <div style="width: 75%; height:160px; background: pink">
+                        <img src="https://occ-0-1360-993.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABe_zk_1yEfQ_C6cNpkT2g9f3xOFn3Yv-6UKpIGSv4z99qXZ82JBQ7ZDNi2pKbYVEbBcAaeJvL6nJMLvMSIynYCcsa4pWJ4_dpu0GHKTRCqjRUITBGTzgIKs2.webp?r=370" alt="" width="100%%" height="AUTO%" style="border-radius: 20px; object-fit:cover;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="sec1-2-font" style="margin-left: 20px">
                         <span style="width: 100%"><b>서프라이즈</b></span><br>
                         <span style="width: 100%">464회  2022-09-23(금)</span><br>
                         <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
                         <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
                     </div>
                 </div>
+                <!--에피소드 한개
+                <div class="epi1" style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img class="epiP" src="https://occ-0-1360-993.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABe_zk_1yEfQ_C6cNpkT2g9f3xOFn3Yv-6UKpIGSv4z99qXZ82JBQ7ZDNi2pKbYVEbBcAaeJvL6nJMLvMSIynYCcsa4pWJ4_dpu0GHKTRCqjRUITBGTzgIKs2.webp?r=370" alt="" style="border-radius: 20px; width: auto; height: auto; overflow: hidden;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>-->
                 <!--에피소드 한개-->
                 <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
                     <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -201,7 +214,7 @@
 
             <br>
             <hr style="border: 0; height: 1px; background: #ccc;">
-            <br>
+            <br><br>
 
             <!-- 페이징처리 -->
             <ul class="pagination" style="display: flex; margin: 20px -470px 0px 470px;">

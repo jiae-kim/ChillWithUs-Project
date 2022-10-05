@@ -61,7 +61,7 @@
     <div class="section1">
         <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="@{/detail.vi}"><img src="/images/section1/movie_01.jpg" alt="1"></a></div>
+                <div class="swiper-slide"><a th:href="@{/detail.vi}"><img src="/images/section1/movie_01.jpg" alt="1"></a></div>
                 <div class="swiper-slide"><a href=""><img src="/images/section1/movie_02.jpg" alt="2"></a></div>
                 <div class="swiper-slide"><a href=""><img src="/images/section1/movie_03.jpg" alt="3"></a></div>
                 <div class="swiper-slide"><a href=""><img src="/images/section1/movie_04.jpg" alt="4"></a></div>
@@ -89,51 +89,43 @@
         <ul class="navigation">
             <li class="navigation-item active">
                 <span class="rotate-holder"></span>
-                <span class="background-holder" style="background-image: url(images/wrap/poster_01.jpg);"></span>
+                <span class="background-holder" style="background-image: url(/images/wrap/poster_01.jpg);"></span>
             </li>
             <li class="navigation-item">
                 <span class="rotate-holder"></span>
-                <span class="background-holder" style="background-image: url(images/waveori_poster_002.jpg);"></span>
+                <span class="background-holder" style="background-image: url(/images/wrap/poster_02.jpg);"></span>
             </li>
             <li class="navigation-item">
                 <span class="rotate-holder"></span>
-                <span class="background-holder" style="background-image: url(images/waveori_poster_003.jpg);"></span>
+                <span class="background-holder" style="background-image: url(/images/wrap/poster_03.jpg);"></span>
             </li>
             <li class="navigation-item">
                 <span class="rotate-holder"></span>
-                <span class="background-holder" style="background-image: url(images/waveori_poster_004.jpg);"></span>
-            </li>
-            <li class="navigation-item">
-                <span class="rotate-holder"></span>
-                <span class="background-holder" style="background-image: url(images/waveori_poster_005.jpg);"></span>
+                <span class="background-holder" style="background-image: url(/images/wrap/poster_04.jpg);"></span>
             </li>
         </ul>
 
         <div class="detail">
             <div class="detail-item active">
-                <div class="headline">모범택시</div>
-                <div class="background" style="background-image: url(images/waveori_background_001.jpg); height: 100vh;"></div>
-                <div class="poster"><a href="#void"><img src="/images/wrap/poster_01.jpg" alt="poster1"></a></div>
+<!--                <div class="headline">모범택시</div>-->
+                <div class="background" style="background-image: url(/images/wrap/background_01.jpg); height: 100vh;"></div>
+                <div class="poster"><img src="/images/wrap/poster_01.jpg" alt="1"></div>
+
             </div>
             <div class="detail-item">
-                <div class="headline">검은태양</div>
-                <div class="background" style="background-image: url(images/waveori_background_002.jpg);"></div>
-                <div class="poster"><a href="#void"><img src="images/waveori_poster_002.jpg" alt="poster1"></a></div>
+<!--                <div class="headline">검은태양</div>-->
+                <div class="background" style="background-image: url(/images/wrap/background_02.jpg);"></div>
+                <div class="poster"><img src="/images/wrap/poster_02.jpg" alt="2"></div>
             </div>
             <div class="detail-item">
-                <div class="headline">경찰수업</div>
-                <div class="background" style="background-image: url(images/waveori_background_003.jpg);"></div>
-                <div class="poster"><a href="#void"><img src="images/waveori_poster_003.jpg" alt="poster1"></a></div>
+<!--                <div class="headline">경찰수업</div>-->
+                <div class="background" style="background-image: url(/images/wrap/background_03.jpg);"></div>
+                <div class="poster"><img src="/images/wrap/poster_03.jpg" alt="3"></div>
             </div>
             <div class="detail-item">
-                <div class="headline">유 레이즈 미 업</div>
-                <div class="background" style="background-image: url(images/waveori_background_004.jpg);"></div>
-                <div class="poster"><a href="#void"><img src="images/waveori_poster_004.jpg" alt="poster1"></a></div>
-            </div>
-            <div class="detail-item">
-                <div class="headline">원더우먼</div>
-                <div class="background" style="background-image: url(images/waveori_background_005.jpg);"></div>
-                <div class="poster"><a href="#void"><img src="images/waveori_poster_005.jpg" alt="poster1"></a></div>
+<!--                <div class="headline">원더우먼</div>-->
+                <div class="background" style="background-image: url(/images/wrap/background_04.jpg);"></div>
+                <div class="poster"><img src="/images/wrap/poster_04.jpg" alt="4"></div>
             </div>
         </div>
     </div>
@@ -141,101 +133,105 @@
     <div class="section2">
         <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_001.jpg" alt="1"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_002.jpg" alt="2"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_003.jpg" alt="3"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/us_poster_004.jpg" alt="4"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_001.jpg" alt="5"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_002.jpg" alt="6"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_003.jpg" alt="7"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/eg_poster_004.jpg" alt="8"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_001.jpg" alt="9"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_002.jpg" alt="10"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_003.jpg" alt="11"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/jp_poster_004.jpg" alt="12"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_001.jpg" alt="13"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_002.jpg" alt="14"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_003.jpg" alt="15"></a></div>
-                <div class="swiper-slide"><a href="#void"><img src="images/ch_poster_004.jpg" alt="16"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/us_01.jpg" alt="us01"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/us_02.jpg" alt="us02"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/us_03.jpg" alt="us03"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/us_04.jpg" alt="us04"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/eg_01.jpg" alt="eg01"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/eg_02.jpg" alt="eg02"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/eg_03.jpg" alt="eg03"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/eg_04.jpg" alt="eg04"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/jp_01.jpg" alt="jp01"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/jp_02.jpg" alt="jp02"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/jp_03.jpg" alt="jp03"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/jp_04.jpg" alt="jp04"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/ch_01.jpg" alt="ch01"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/ch_02.jpg" alt="ch02"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/ch_03.jpg" alt="ch03"></a></div>
+                <div class="swiper-slide"><a href=""><img src="/images/section2/ch_04.jpg" alt="ch04"></a></div>
             </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination3"></div>
-        <a href="#void">더보기 &gt</a>
+        <a href="">더보기 &gt</a>
     </div>
 
     <div class="scrollBanner">
         <div class="lineWrap">
-            <ul class="line1">
-                <li><img src="images/line1/line_01_001.jpg" alt="line_01_001"></li>
-                <li><img src="images/line1/line_01_002.jpg" alt="line_01_002"></li>
-                <li><img src="images/line1/line_01_003.jpg" alt="line_01_003"></li>
-                <li><img src="images/line1/line_01_004.jpg" alt="line_01_004"></li>
-                <li><img src="images/line1/line_01_005.jpg" alt="line_01_005"></li>
-                <li><img src="images/line1/line_01_006.jpg" alt="line_01_006"></li>
-                <li><img src="images/line1/line_01_007.jpg" alt="line_01_007"></li>
-                <li><img src="images/line1/line_01_008.jpg" alt="line_01_008"></li>
-                <li><img src="images/line1/line_01_009.jpg" alt="line_01_009"></li>
-                <li><img src="images/line1/line_01_010.jpg" alt="line_01_010"></li>
-                <li><img src="images/line1/line_01_011.jpg" alt="line_01_011"></li>
-                <li><img src="images/line1/line_01_012.jpg" alt="line_01_012"></li>
-                <li><img src="images/line1/line_01_013.jpg" alt="line_01_013"></li>
-                <li><img src="images/line1/line_01_014.jpg" alt="line_01_014"></li>
-                <li><img src="images/line1/line_01_015.jpg" alt="line_01_015"></li>
-                <li><img src="images/line1/line_01_016.jpg" alt="line_01_016"></li>
-                <li><img src="images/line1/line_01_017.jpg" alt="line_01_017"></li>
-                <li><img src="images/line1/line_01_018.jpg" alt="line_01_018"></li>
-                <li><img src="images/line1/line_01_019.jpg" alt="line_01_019"></li>
-                <li><img src="images/line1/line_01_020.jpg" alt="line_01_020"></li>
-                <li><img src="images/line1/line_01_021.jpg" alt="line_01_021"></li>
-                <li><img src="images/line1/line_01_022.jpg" alt="line_01_022"></li>
-                <li><img src="images/line1/line_01_023.jpg" alt="line_01_023"></li>
-                <li><img src="images/line1/line_01_024.jpg" alt="line_01_024"></li>
-                <li><img src="images/line1/line_01_025.jpg" alt="line_01_025"></li>
-                <li><img src="images/line1/line_01_026.jpg" alt="line_01_026"></li>
+            <ul class="line2">
+                <li><img src="/images/line2/line_02_001.jpg" alt="line_02_001"></li>
+                <li><img src="/images/line2/line_02_002.jpg" alt="line_02_002"></li>
+                <li><img src="/images/line2/line_02_003.jpg" alt="line_02_003"></li>
+                <li><img src="/images/line2/line_02_004.jpg" alt="line_02_004"></li>
+                <li><img src="/images/line2/line_02_005.jpg" alt="line_02_005"></li>
+                <li><img src="/images/line2/line_02_006.jpg" alt="line_02_006"></li>
+                <li><img src="/images/line2/line_02_007.jpg" alt="line_02_007"></li>
             </ul>
         </div>
 
-        <div class="parallaxBanner" data-parallax="scroll" data-image-src="images/parallax_background.JPG"><span>이동 중에도 감상을 멈추지 마세요</span></div>
+        <div class="parallaxBanner" data-parallax="scroll" data-image-src="/images/parallax_background.jpg"><span>이동 중에도 감상을 멈추지 마세요</span></div>
+
         <div class="lineWrap">
-            <ul class="line2">
-                <li><img src="images/line2/line_02_001.jpg" alt="line_02_001"></li>
-                <li><img src="images/line2/line_02_002.jpg" alt="line_02_002"></li>
-                <li><img src="images/line2/line_02_003.jpg" alt="line_02_003"></li>
-                <li><img src="images/line2/line_02_004.jpg" alt="line_02_004"></li>
-                <li><img src="images/line2/line_02_005.jpg" alt="line_02_005"></li>
-                <li><img src="images/line2/line_02_006.jpg" alt="line_02_006"></li>
-                <li><img src="images/line2/line_02_007.jpg" alt="line_02_007"></li>
+            <ul class="line1">
+                <li><img src="/images/line1/line_01_001.jpg" alt="line_01_001"></li>
+                <li><img src="/images/line1/line_01_002.jpg" alt="line_01_002"></li>
+                <li><img src="/images/line1/line_01_003.jpg" alt="line_01_003"></li>
+                <li><img src="/images/line1/line_01_004.jpg" alt="line_01_004"></li>
+                <li><img src="/images/line1/line_01_005.jpg" alt="line_01_005"></li>
+                <li><img src="/images/line1/line_01_006.jpg" alt="line_01_006"></li>
+                <li><img src="/images/line1/line_01_007.jpg" alt="line_01_007"></li>
+                <li><img src="/images/line1/line_01_008.jpg" alt="line_01_008"></li>
+                <li><img src="/images/line1/line_01_009.jpg" alt="line_01_009"></li>
+                <li><img src="/images/line1/line_01_010.jpg" alt="line_01_010"></li>
+                <li><img src="/images/line1/line_01_011.jpg" alt="line_01_011"></li>
+                <li><img src="/images/line1/line_01_012.jpg" alt="line_01_012"></li>
+                <li><img src="/images/line1/line_01_013.jpg" alt="line_01_013"></li>
+                <li><img src="/images/line1/line_01_014.jpg" alt="line_01_014"></li>
+                <li><img src="/images/line1/line_01_015.jpg" alt="line_01_015"></li>
+                <li><img src="/images/line1/line_01_016.jpg" alt="line_01_016"></li>
+                <li><img src="/images/line1/line_01_017.jpg" alt="line_01_017"></li>
+                <li><img src="/images/line1/line_01_018.jpg" alt="line_01_018"></li>
+                <li><img src="/images/line1/line_01_019.jpg" alt="line_01_019"></li>
+                <li><img src="/images/line1/line_01_020.jpg" alt="line_01_020"></li>
+                <li><img src="/images/line1/line_01_021.jpg" alt="line_01_021"></li>
+                <li><img src="/images/line1/line_01_022.jpg" alt="line_01_022"></li>
+                <li><img src="/images/line1/line_01_023.jpg" alt="line_01_023"></li>
+                <li><img src="/images/line1/line_01_024.jpg" alt="line_01_024"></li>
+                <li><img src="/images/line1/line_01_025.jpg" alt="line_01_025"></li>
+                <li><img src="/images/line1/line_01_026.jpg" alt="line_01_026"></li>
             </ul>
         </div>
-        <ul class="line3">
-            <li><img src="images/line3/line_03_001.jpg" alt="line_03_001"></li>
-            <li><img src="images/line3/line_03_002.jpg" alt="line_03_002"></li>
-            <li><img src="images/line3/line_03_003.jpg" alt="line_03_003"></li>
-            <li><img src="images/line3/line_03_004.jpg" alt="line_03_004"></li>
-            <li><img src="images/line3/line_03_005.jpg" alt="line_03_005"></li>
-            <li><img src="images/line3/line_03_006.jpg" alt="line_03_006"></li>
-            <li><img src="images/line3/line_03_007.jpg" alt="line_03_007"></li>
-            <li><img src="images/line3/line_03_008.jpg" alt="line_03_008"></li>
-            <li><img src="images/line3/line_03_009.jpg" alt="line_03_009"></li>
-            <li><img src="images/line3/line_03_010.jpg" alt="line_03_010"></li>
-            <li><img src="images/line3/line_03_011.jpg" alt="line_03_011"></li>
-            <li><img src="images/line3/line_03_012.jpg" alt="line_03_012"></li>
-            <li><img src="images/line3/line_03_013.jpg" alt="line_03_013"></li>
-            <li><img src="images/line3/line_03_014.jpg" alt="line_03_014"></li>
-            <li><img src="images/line3/line_03_015.jpg" alt="line_03_015"></li>
-            <li><img src="images/line3/line_03_016.jpg" alt="line_03_016"></li>
-            <li><img src="images/line3/line_03_017.jpg" alt="line_03_017"></li>
-            <li><img src="images/line3/line_03_018.jpg" alt="line_03_018"></li>
-            <li><img src="images/line3/line_03_019.jpg" alt="line_03_019"></li>
-            <li><img src="images/line3/line_03_020.jpg" alt="line_03_020"></li>
-            <li><img src="images/line3/line_03_021.jpg" alt="line_03_021"></li>
-            <li><img src="images/line3/line_03_022.jpg" alt="line_03_022"></li>
-            <li><img src="images/line3/line_03_023.jpg" alt="line_03_023"></li>
-            <li><img src="images/line3/line_03_024.jpg" alt="line_03_024"></li>
-            <li><img src="images/line3/line_03_025.jpg" alt="line_03_025"></li>
-        </ul>
+
+<!--        <div class="parallaxBanner" data-parallax="scroll" data-image-src="images/parallax_background.JPG"><span>이동 중에도 감상을 멈추지 마세요</span></div>-->
+
+<!--        <ul class="line3">-->
+<!--            <li><img src="images/line3/line_03_001.jpg" alt="line_03_001"></li>-->
+<!--            <li><img src="images/line3/line_03_002.jpg" alt="line_03_002"></li>-->
+<!--            <li><img src="images/line3/line_03_003.jpg" alt="line_03_003"></li>-->
+<!--            <li><img src="images/line3/line_03_004.jpg" alt="line_03_004"></li>-->
+<!--            <li><img src="images/line3/line_03_005.jpg" alt="line_03_005"></li>-->
+<!--            <li><img src="images/line3/line_03_006.jpg" alt="line_03_006"></li>-->
+<!--            <li><img src="images/line3/line_03_007.jpg" alt="line_03_007"></li>-->
+<!--            <li><img src="images/line3/line_03_008.jpg" alt="line_03_008"></li>-->
+<!--            <li><img src="images/line3/line_03_009.jpg" alt="line_03_009"></li>-->
+<!--            <li><img src="images/line3/line_03_010.jpg" alt="line_03_010"></li>-->
+<!--            <li><img src="images/line3/line_03_011.jpg" alt="line_03_011"></li>-->
+<!--            <li><img src="images/line3/line_03_012.jpg" alt="line_03_012"></li>-->
+<!--            <li><img src="images/line3/line_03_013.jpg" alt="line_03_013"></li>-->
+<!--            <li><img src="images/line3/line_03_014.jpg" alt="line_03_014"></li>-->
+<!--            <li><img src="images/line3/line_03_015.jpg" alt="line_03_015"></li>-->
+<!--            <li><img src="images/line3/line_03_016.jpg" alt="line_03_016"></li>-->
+<!--            <li><img src="images/line3/line_03_017.jpg" alt="line_03_017"></li>-->
+<!--            <li><img src="images/line3/line_03_018.jpg" alt="line_03_018"></li>-->
+<!--            <li><img src="images/line3/line_03_019.jpg" alt="line_03_019"></li>-->
+<!--            <li><img src="images/line3/line_03_020.jpg" alt="line_03_020"></li>-->
+<!--            <li><img src="images/line3/line_03_021.jpg" alt="line_03_021"></li>-->
+<!--            <li><img src="images/line3/line_03_022.jpg" alt="line_03_022"></li>-->
+<!--            <li><img src="images/line3/line_03_023.jpg" alt="line_03_023"></li>-->
+<!--            <li><img src="images/line3/line_03_024.jpg" alt="line_03_024"></li>-->
+<!--            <li><img src="images/line3/line_03_025.jpg" alt="line_03_025"></li>-->
+<!--        </ul>-->
     </div>
 </div>
 

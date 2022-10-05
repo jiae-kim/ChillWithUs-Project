@@ -16,6 +16,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
 }
 
 dependencies {
@@ -28,6 +29,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	//compile("org.mybatis:mybatis:3.5.9") // Adjust version to your application
+	//compile("org.mybatis.scripting:mybatis-thymeleaf:1.0.3")
 }
 
 tasks.named('test') {
