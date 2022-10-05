@@ -16,4 +16,7 @@ public class HelloWorldController {
     public String videoDetail(Model model){
         return "videoDetail";
     }
+
+    @RequestMapping("/enrollForm.us")
+    public String userEnrollForm(Model model){return "userEnrollForm";}
 }
