@@ -18,5 +18,8 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/enrollForm.us")
-    public String userEnrollForm(Model model){return "userEnrollForm";}
+    public String userEnrollForm(Model model){return "/views/user/userEnrollForm";}
+
+    @RequestMapping("login.us")
+    public String login(Model model){return "/views/user/login";}
 }
