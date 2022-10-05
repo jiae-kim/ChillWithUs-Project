@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div th:insert="~{menubar :: menubar}"></div>
+<div th:insert="~{views/common/menubar :: menubar}"></div>
 
 <div class="bg"></div>
 
@@ -203,6 +203,8 @@
             </ul>
         </div>
 
+<!--        <div class="parallaxBanner" data-parallax="scroll" data-image-src="images/parallax_background.JPG"><span>이동 중에도 감상을 멈추지 마세요</span></div>-->
+
 <!--        <ul class="line3">-->
 <!--            <li><img src="images/line3/line_03_001.jpg" alt="line_03_001"></li>-->
 <!--            <li><img src="images/line3/line_03_002.jpg" alt="line_03_002"></li>-->
@@ -233,6 +235,6 @@
     </div>
 </div>
 
-<div th:insert="~{footer :: footer}"></div>
+<div th:insert="~{views/common/footer :: footer}"></div>
 </body>
 </html>
