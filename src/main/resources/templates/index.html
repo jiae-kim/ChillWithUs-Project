@@ -8,11 +8,28 @@
 </head>
 
 <body>
+<div class="banner">
+    <div class="banner__content">
+        <div class="banner__text">
+            <strong>chillwithUS와 함께 하셔서 모든 영화, 드라마를 무제한으로 감상하세요</strong>
+            <br><br>
+            <button class="btnO">이용권 구매</button> <button class="btnD">쿠폰등록</button>
+        </div>
+        <button class="banner__close" type="button">
+        <span class="material-icons">
+          close
+        </span>
+        </button>
+    </div>
+</div>
+<script>
+    document.querySelector(".banner__close").addEventListener("click", function () {
+        this.closest(".banner").style.display = "none";
+    });
+</script>
 <div th:insert="~{views/common/menubar :: menubar}"></div>
 
 <div class="bg"></div>
-
-<div id="mainBanner">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
