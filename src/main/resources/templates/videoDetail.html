@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .search {
+            position: relative;
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        i {
+            position : absolute;
+            width: 27px !important;
+            height: 227px !important;
+            top: 10px;
+            right: -20px;
+            margin: 0;
+        }
+        #check-btn { display: none; }
+        #check-btn:checked ~ .menubars { display: block; }
+        .menubars { display: none; }
+        .sec1-2-font span{
+            font-size: 14px;
+            color:#bbb;
+            line-height: 170%;
+            vertical-align: middle;
+        }
+        .epi{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .pagination {
+            display: inline-block;
+        }
+        .pagination a {
+            color: white;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-weight: bold
+        }
+    </style>
+</head>
+<body>
+<div th:insert="~{menubar :: menubar}"></div>
+
+<div class="bg"></div>
+
+<div id="mainBanner" align="middle">
+    <div class="swiper mySwiper" style="width:60%; height:90%">
+        <div class="swiper-wrapper" style="margin-top: 70px;">
+            <div class="swiper-slide">
+                <!--<img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" width="20" height="10" alt="">-->
+                <iframe width="1560" height="615" src="https://www.youtube.com/embed/on09zv-ujyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="container" style="margin-bottom: -150px;">
+    <div class="section1" style="background-color: rgb(34, 34, 34); width: 100%; height: 100%; margin-top: -150px;">
+        <div class="section1-1" style="width: 65%; margin: auto;">
+            <br><br>
+            <h1>나 혼자 산다</h1><br>
+            <span style="font-size: 15px; color: #bbb; font-weight: bold; margin: 0px 0px 0px 0px">464회 2022-09-23 (금) 예능 94분 15세</span><br><br>
+            <p style="font-size: 15px; color: #bbb; font-weight:550; line-height: 150%;">’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개 라이브 - 천정명반갑구만 반가워요~ ’국민 첫사랑남‘ 천정명!조교 출신 칼각! 인테리어 잡지 뺨치는 정명하우스 大공개!주짓수 경력만 11년차! ’천싸부님‘ 카리스마 뿜뿜 주짓수 대련도 하고~깊은 밤, 나만의 루프탑에서 바비큐 파티도 즐기고~숨겨왔던 나~의 매력 가득한 천정명의 싱글 라이프♥# 키 - 뉴스남 데뷔하다! 쨍하고 뉴스 뜬 키뉴스 자료화면 출연만 5번! 뉴스가 사랑한 남자 키!★OH★ 본인등판 ★OH★ 일일 뉴스 진행에 나서다!새벽부터 일어나 연습, 연습, 또 연습!  심장이 쿵쿵 손발이 덜덜, 생방송 뉴스의 순간까지! 과연 키는 무사히 뉴스 데뷔를 마칠 수 있을지!?
+                출연전현무, 박나래, 기안84, 성훈, 화사</p>
+            <br><br>
+
+            <label for="check-btn" style="font-size: 15px; color: #bbb; font-weight: bold; cursor : pointer">더보기 ></label>
+            <input id="check-btn" type="checkbox" />
+            <ul class="menubars" style="font-size: 15px; color: #bbb; font-weight: normal; line-height: 150%;">
+                <br>
+                <span>나 혼자 산다</span><br>
+                <span>독신 남녀와 1인 가정이 늘어나는 세태를 반영해 혼자 사는 유명인들의 일상을 관찰 카메라 형태로 담은 다큐멘터리 형식의 예능 프로그램</span><br>
+                <span>개요 : MBC, 대한민국, 2022년</span><br>
+                <span>장르 : #리얼리티, #라이프</span><br>
+                <span>감독 : 김영진, 허항, 강지희</span><br>
+                <span>작가 : 이경하, 김희경, 한영신, 양지인, 한주희, 박성은, 남혜현, 문다솜</span>
+            </ul>
+
+            <br><br><br><br><br>
+        </div>
+
+        <div class="section1-2" style="width: 65%; margin: auto;">
+            <h1>에피소드</h1><br>
+            <hr style="border: 0; height: 1px; background: #ccc;">
+            <br><br>
+
+            <div class="epi" style="display: grid;">
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+                <!--에피소드 한개-->
+                <div style="display:flex; width: 100%; margin: 10px 10px 10px 0px;">
+                    <img src="https://src.hidoc.co.kr/image/lib/2022/5/12/1652337370806_0.jpg" alt="" width="40%" style="border-radius: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="sec1-2-font">
+                        <span style="width: 100%"><b>서프라이즈</b></span><br>
+                        <span style="width: 100%">464회  2022-09-23(금)</span><br>
+                        <span style="width: 100%"><나 혼자 산다> ’서프라이즈‘ 편회원님이 왜 여기서 나와..? 반가운 무지개 회원들의 깜짝 등장!# 무지개</span><br>
+                        <span style="width: 100%">출연 : 전현무, 박나래, 기안84, 성훈, 화사</span><br>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <hr style="border: 0; height: 1px; background: #ccc;">
+            <br>
+
+            <!-- 페이징처리 -->
+            <ul class="pagination" style="display: flex; margin: 20px -470px 0px 470px;">
+                <li class="page-item"><a class="page-link" href=""><</a></li>
+                <li class="page-item"><a class="page-link" href="">1</a></li>
+                <li class="page-item"><a class="page-link" href="">2</a></li>
+                <li class="page-item"><a class="page-link" href="">3</a></li>
+                <li class="page-item"><a class="page-link" href="">4</a></li>
+                <li class="page-item"><a class="page-link" href="">5</a></li>
+                <li class="page-item"><a class="page-link" href="">></a></li>
+            </ul>
+
+            <script>
+                export default {
+                    data() {
+                        return {
+                            rows: 100,
+                            currentPage: 1
+                        }
+                    }
+                }
+            </script>
+
+            <br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+
+</div>
+
+<div th:insert="~{footer :: footer}"></div>
+</body>
+</html>

@@ -11,4 +11,9 @@ public class HelloWorldController {
         model.addAttribute("name", "Hello World!");
         return "index";
     }
+
+    @RequestMapping("/detail.vi")
+    public String videoDetail(Model model){
+        return "videoDetail";
+    }
 }
