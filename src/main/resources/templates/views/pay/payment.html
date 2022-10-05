@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .wrap{
+      margin: auto;
+      width: 966px;
+      height: 700px;
+      padding: 50px;
+      background-color: #242625;
+      color: white;
+    }
+
+    .wHeader{
+      margin: auto;
+    }
+
+    .wBody{
+      margin: auto;
+    }
+
+    .wfooter{
+      text-align: center;
+    }
+
+    .thline{
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .tdline{
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    ul{
+      font-size: 0.7em;
+      text-align: left;
+    }
+
+    table{
+      border-spacing: 10px;
+    }
+
+    .btn{
+      border:0;
+      width: 250px;
+      height: 50px;
+      font-weight: bolder;
+      color: white;
+      background-color: rgb(248, 47, 98);
+    }
+
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="wHeader">
+    2단계중 1단계
+    <br><br>
+    <h2>이용권을 선택해주세요</h2>
+    다양한 디바이스에서 감상하세요 언제든 해지 가능합니다.
+  </div>
+  <div class="wBody">
+    <table>
+      <tr>
+        <td width="220px" height="50px" class="tdline"></td>
+        <td width="100px" class="tdline basic">베이직</td>
+        <td width="100px" class="tdline premium">프리미엄</td>
+        <td width="40px"></td>
+        <td rowspan="4" style="text-align: left; background-color: black;" >
+          <div style="width: 350px; height: 200px; margin: auto;">
+            <h4>10만여 편의 콘텐츠 무제한 감상</h4>
+            인기 영화, 드라마, 예능, 다큐를 추가 지불 없이 감상하세요
+            <h4>6억 개 평가 데이터에 기반한 추천 제공</h4>
+            아무런 감흥이 없을 콘텐츠에 시간을 낭비할 필요가 없습니다
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th height="50px" class="thline">월 요금</th>
+        <td class="tdline basic">8000원</td>
+        <td class="tdline premium">13000원</td>
+        <td ></td>
+      </tr>
+      <tr>
+        <th height="50px" class="thline">동시 재생이 가능한 수</th>
+        <td class="tdline basic">1</td>
+        <td class="tdline premium">4</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th height="50px" class="thline">지원하는 최대 화질</th>
+        <td class="tdline basic">Full HD</td>
+        <td class="tdline premium">Ultra HD 4k</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <th height="50px" class="thline">HDR 10+의 선명한 화질</th>
+        <td class="tdline basic">X</td>
+        <td class="tdline premium">O</td>
+        <td></td>
+        <td rowspan="4" >
+          <ul>
+            <li>2주 무료 이용기간 내 해지시 서비스 이용이 중지 될 수 있습니다.</li>
+            <li>결제 금액에는 VAT가 포함되어 있습니다.</li>
+            <li>이용 기간이 종료되기 24시간 이내에 다음 이용에 대한 비용이 결제됩니다. 즉, 이용 기간 종료 시점으로부터 최소 23시간 전에 이용을 취소하지 않으시면 이용권이 자동으로 갱신됩니다.</li>
+            <li>결제취소는 결제 후 7일 내 서비스 미 이용 시 가능하며, 결제 후 7일 경과 또는 서비스 이용 시에는 환불이 불가능합니다.</li>
+            <li>저작권자의 요청에 따라 일부 콘텐츠의 동시 재생이 제한될 수 있습니다.</li>
+            <li>최대 화질의 이용 가능 여부는 이용권 종류, 네트워크 환경, 콘텐츠 계약 조건, 디바이스의 물리적 사양에 따라 제한될 수 있습니다</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th height="50px" class="thline">저장 가능한 다운로드 영상 수</th>
+        <td class="tdline basic">5</td>
+        <td class="tdline premium">100</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th height="50px" class="thline">TV, 폰, 태블릿, PC에서 재생</th>
+        <td class="tdline basic">O</td>
+        <td class="tdline premium">O</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th height="30px"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div class="wfooter">
+    <button class="btn">이용권 구매하기</button>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

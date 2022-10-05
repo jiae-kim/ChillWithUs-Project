@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .wrap{
+      margin: auto;
+      width: 966px;
+      height: 700px;
+      padding: 50px;
+      background-color: rgb(36, 38, 37);
+      color: white;
+    }
+
+    .wHeader{
+      margin: auto;
+    }
+
+    .wBody{
+      margin: auto;
+      height: 400px;
+    }
+
+    .wfooter{
+      text-align: center;
+      margin: auto;
+      height: 200px;
+      background-color: rgb(34, 34, 34);
+    }
+
+    .thline{
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .tdline{
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    ul{
+      font-size: 0.7em;
+      text-align: left;
+    }
+
+    table{
+      border-spacing: 10px;
+    }
+
+    .btn{
+      border:0;
+      width: 250px;
+      height: 50px;
+      font-weight: bolder;
+      color: black;
+      background-color: #fef01b;
+    }
+
+    .btn2{
+      border:0;
+      width: 250px;
+      height: 50px;
+      font-weight: bolder;
+      color: white;
+      background-color: #63625f;
+    }
+
+    .content{
+      width: 450px;
+      height: 400px;
+      margin: auto;
+    }
+
+    .right{
+      float: right;
+    }
+
+    .cardInfo{
+      text-align: center;
+      margin: auto;
+    }
+
+    h3{
+      margin : 2px;
+    }
+
+    .signedCard{
+      text-align: left;
+      width: 300px;
+      margin: auto;
+      padding: 10px;
+      height: 50px;
+      background-color: #31302e;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="wHeader">
+    2단계중 2단계
+    <br><br>
+    <h2>결제 정보를 입력해주세요</h2>
+  </div>
+
+  <div class="wBody">
+    <div class="content">
+      <span>프리미엄 요금제</span><span class="right">다시 선택하기</span>
+      <hr>
+      <div class="cardInfo">
+        기존에 등록해 놓으신 결제 수단이 있습니다
+        <br><br>
+        <div class="signedCard">
+          <h3>기존 카드로 결제할게요</h3>
+          국민 *************1234
+        </div>
+        <br>
+        <div class="signedCard">
+          <h3 style="padding-top: 10px;">다른카드로 결제할게요</h3>
+        </div>
+        <div style="padding: 5px; font-size: 0.8em; color: lightgray;">*1개월마다 13000원(VAT포함)이 자동으로 결제됩니다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="wfooter">
+    <br>
+    다른결제 수단 이용하기
+    <br>
+    <br>
+    <button class="btn">카카로페이로 결제하기</button> &nbsp <button class="btn2">휴대폰으로 결제하기</button>
+    <div style="padding: 5px; font-size: 0.8em; color: lightgray;">* 휴대폰 결제는 통신사의 정책상 0원 결제가 불가능하여,
+      무료 이용시 100원이 결제됩니다.</div>
+  </div>
+</div>
+</body>
+</html>
