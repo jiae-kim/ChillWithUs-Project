@@ -10,54 +10,11 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/swiper-bundle.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/swiper-bundle.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/TextPlugin.min.js"></script>
-    <script src="js/rotateBanner.js"></script>
-    <script src="js/infiniteslidev2.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/script.js"></script>
 </head>
 
 <body>
-<header>
-    <div class="logo">
-        <h1><a href="index.html"><img src="images/watcha_logo.svg" alt="wave_logo"></a></h1>
-    </div>
-    <div class="hamWrap">
-        <div class="ham">
-            <a href="#void">
-                <div class="hamBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="hamText">
-                    <span>MENU</span>
-                </div>
-            </a>
-        </div>
-    </div>
-</header>
-<nav>
-    <ul id="nav">
-        <li><a href="#void">로그인</a></li>
-        <li><a href="#void">회원가입</a></li>
-        <li><a href="#void">홈</a></li>
-        <li><a href="#void">찾기</a></li>
-        <li><a href="#void">보관함</a></li>
-    </ul>
-</nav>
+
+<div th:insert="~{menubar :: menubar}"></div>
 
 <div class="bg"></div>
 
@@ -352,29 +309,7 @@
     </div>
 </div>
 
-<footer>
-    <div class="innerBox">
-        <ul class="ftTop">
-            <li><a href="#void">왓챠피디아 서비스 이용약관</a></li>
-            <li><a href="#void">개인정보 처리 방침</a></li>
-            <li><a href="#void">왓챠 서비스 이용약관</a></li>
-            <li><a href="#void">고객센터</a></li>
-            <li><a href="#void">채용정보</a></li>
-        </ul>
-        <div class="ftBottom">
-            <ul>
-                <li>주식회사 왓챠</li>
-                <li>대표 박태훈</li>
-                <li>서울특별시 서초구 강남대로 343 신덕빌딩 3층</li>
-            </ul>
-            <ul>
-                <li>사업자등록번호 211-88-66013</li>
-                <li>통신판매업 신고번호 제 2019-서울서초-0965호</li>
-            </ul>
-        </div>
-        <p>Copyright © 2022 by Watcha, Inc. All rights reserved.</p>
-    </div>
+<div th:insert="~{footer :: footer}"></div>
 
-</footer>
 </body>
 </html>
