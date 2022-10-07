@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chill With Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -13,7 +16,7 @@
         <div class="banner__text">
             <strong>chillwithUS와 함께 하셔서 모든 영화, 드라마를 무제한으로 감상하세요</strong>
             <br><br>
-            <button class="btnO">이용권 구매</button> <button class="btnD">쿠폰등록</button>
+            <button class="btnO" data-toggle="modal" href="openModal.pay" data-target="#modal">이용권 구매</button> <!--<button class="btnD">쿠폰등록</button>-->
         </div>
         <button class="banner__close" type="button">
         <span class="material-icons">
@@ -22,7 +25,18 @@
         </button>
     </div>
 </div>
+
+<!-- 결제 상세조회 모달 -->
+<div id="modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" style="width:966px;height:700px;">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
 <script>
+
+    //팝업 배너 닫기
     document.querySelector(".banner__close").addEventListener("click", function () {
         this.closest(".banner").style.display = "none";
     });
