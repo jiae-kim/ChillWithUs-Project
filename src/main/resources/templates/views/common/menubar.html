@@ -11,7 +11,7 @@
 <div th:fragment="menubar">
     <header>
         <div class="logo">
-            <h1><a href="/hello"><img src="images/logo2.png" alt="wave_logo"></a></h1>
+            <h1><a href="/main"><img src="images/logo2.png" alt="wave_logo"></a></h1>
 <!--
             <h1><a href="../../index.html"><img src="images/watcha_logo.svg" alt="wave_logo"></a></h1>
 -->
@@ -52,11 +52,12 @@
     </header>
     <nav>
         <ul id="nav">
-            <li><a href="#void">HOME</a></li>
+            <li><a href="/hello">HOME</a></li>
             <li><a th:href="@{/login.us}">Sign in</a></li>
             <li><a th:href="@{/enrollForm.us}">Sign up</a></li>
             <li><a href="#void">My Page</a></li>
-            <li><a href="#void">Search</a></li>
+            <li><a th:href="@{/openChat.cht}">Search</a></li>
+            <li><button onclick="window.open('openChat.cht','chatRoom','_blank');" style="border: 0px; background-color: black;">Chat</button></li>
         </ul>
     </nav>
 </div>

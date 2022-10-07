@@ -62,6 +62,8 @@
       color:#ff7f00;
     }
   </style>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
 <div class="modal-body" style="padding: 0px;">
@@ -80,7 +82,7 @@
         <tr>
           <td width="220px" height="50px" class="tdline"></td>
           <td width="100px" class="tdline basic" id="basic">베이직</td>
-          <td width="100px" class="tdline premium">프리미엄</td>
+          <td width="100px" class="tdline premium" id="premium">프리미엄</td>
           <td width="40px"></td>
           <td rowspan="4" style="text-align: left; background-color: black;" >
             <div style="width: 350px; height: 200px; margin: auto;">
@@ -96,26 +98,26 @@
         <tr>
           <th height="50px" class="thline">월 요금</th>
           <td class="tdline basic" id="basic">8000원</td>
-          <td class="tdline premium">13000원</td>
+          <td class="tdline premium" id="premium">13000원</td>
           <td ></td>
         </tr>
         <tr>
           <th height="50px" class="thline">동시 재생이 가능한 수</th>
           <td class="tdline basic" id="basic">1</td>
-          <td class="tdline premium">4</td>
+          <td class="tdline premium" id="premium">4</td>
           <td></td>
         </tr>
         <tr>
           <th height="50px" class="thline">지원하는 최대 화질</th>
           <td class="tdline basic" id="basic">Full HD</td>
-          <td class="tdline premium">Ultra HD 4k</td>
+          <td class="tdline premium" id="premium">Ultra HD 4k</td>
           <td></td>
 
         </tr>
         <tr>
           <th height="50px" class="thline">HDR 10+의 선명한 화질</th>
           <td class="tdline basic" id="basic">X</td>
-          <td class="tdline premium">O</td>
+          <td class="tdline premium" id="premium">O</td>
           <td></td>
           <td rowspan="4" >
             <ul>
@@ -131,13 +133,13 @@
         <tr>
           <th height="50px" class="thline">저장 가능한 다운로드 영상 수</th>
           <td class="tdline basic" id="basic">5</td>
-          <td class="tdline premium">100</td>
+          <td class="tdline premium" id="premium">100</td>
           <td></td>
         </tr>
         <tr>
           <th height="50px" class="thline">TV, 폰, 태블릿, PC에서 재생</th>
           <td class="tdline basic" id="basic">O</td>
-          <td class="tdline premium">O</td>
+          <td class="tdline premium" id="premium">O</td>
           <td></td>
         </tr>
         <tr>
@@ -160,7 +162,36 @@
   function colorChange(event){
     console.log(event.target);
     console.log(this);
+
+    if (event.target.classList[1] === "clicked") {
+      event.target.classList.remove("clicked");
+    } else {
+      for (var i = 0; i < basic.length; i++) {
+        basic[i].classList.remove("clicked");
+      }
+
+      event.target.classList.add("clicked");
+    }
   }
+
+  function init() {
+    for (var i = 0; i < basic.length; i++) {
+      basic[i].addEventListener("click", handleClick);
+    }
+  }
+
+  init();
+
+  //선택시 한번에 클릭 이벤트 걸기
+  $(function(){
+    $("table tr td").click(function(){
+      var level=$(this).attr("id");
+      alert(level);
+
+
+
+    });
+  });
 </script>
 
 
