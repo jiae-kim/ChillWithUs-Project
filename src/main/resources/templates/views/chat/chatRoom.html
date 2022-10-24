@@ -5,380 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>채팅창</title>
 
-  <style>
-    .chat_wrap{
-      /* width: 300px; */
-      padding:5px;
-      font-size: 13px;
-      color: #333;
-    }
-    .chat_wrap .inner {
-      /* background-color: #fff; */
-      border-radius: 5px;
-      padding: 10px 20px;
-      overflow-y: scroll;
-      height: 300px;
-    }
-    .chat_wrap .item {
-      margin-top: 15px;
-    }
-    .chat_wrap .item:first-child{
-      margin-top: 0;
-    }
-    .chat_wrap .item .box{
-      display: inline-block;
-      max-width: 203px;
-      position: relative;
-    }
-    .chat_wrap .item .box::before{
-      content: "";
-      position:absolute;
-      left: -8px;
-      top:9px;
-      border-top: 0px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-right:  8px solid #f3f3f3;
-    }
-    .chat_wrap .item .box .msg{
-      background-color: #f3f3f3;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: left;
-      font-size: 15px;
-    }
-    .chat_wrap .item .box .time{
-      font-size: 11px;
-      color: #999;
-      /* position: absolute; */
-      right: -75px;
-      bottom: 0;
-      width: 70px;
-    }
-    .chat_wrap .item.mymsg{
-      text-align: right;
-    }
-    .chat_wrap .item.mymsg .box::before{
-      left: auto;
-      right: -8px;
-      border-left:  8px solid #fee600;
-      border-right: 0;
-    }
-    .chat_wrap .item.mymsg .box .time{
-      right: auto;
-      left: -75px;
-    }
-    .chat_wrap .item.mymsg .box .msg{
-      background: #fee600;
-    }
-    .chat_wrap .item .box{
-      transition: all .3s ease-out;
-      margin:0 0 0 20px;
-      opacity: 0;
-    }
-    .chat_wrap .item.mymsg .box{
-      margin: 0 20px 0 0;
-    }
-    .chat_wrap .item.on .box{
-      margin:0; opacity: 1;
-    }
-
-    input[type="text"] {
-      border:0;
-      width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 14px;
-      height: 30px;
-      padding: 20px;
-      box-sizing: border-box;
-      margin-top: 5px;
-    }
-    input[type="text"]::placeholder{
-      color: #999;
-    }
-
-
-    /* 채팅 info */
-    .chat_info img{
-      width: 105px;
-    }
-
-    .chat_info span{
-      font-family: 'IBM Plex Sans KR';
-      font-weight: 500;
-      vertical-align: top;
-      display: inline-block;
-      padding: 17px 0 0 10px;
-    }
-
-    .chat_info {
-      background: #f8f8f8;
-      padding:10px;
-      box-shadow: 2px 0 5px grey;
-    }
-
-    .chatClose{
-      position: absolute;
-      right: 10px;
-      top: 16px;
-      line-height: 100%;
-      font-size: 34px;
-      cursor: pointer;
-    }
-
-    /* .flex_wrap{
-        display: flex;
-    } */
-
-    /* .tteuttoProfile{
-        display: flex;
-        flex-direction: column;
-        -webkit-box-pack: end;
-        justify-content: flex-start;
-        padding-top: 20px;
-        width: 40px;
-    } */
-    #sendBtn{
-      border: none;
-      background: #bc3401;
-      color: white;
-      border-radius: 15px;
-      padding-left: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      width: 60px;
-      height: 40px;
-      margin: 5px;
-
-      align-items: center;
-      display: flex;
-    }
-
-    /* 채팅창 제목 */
-    .chat_title{
-      margin: auto;
-      max-width: 189px;
-    }
-
-    .chat_title img{
-      width: 71px;
-      border-radius: 35px;
-      margin: 21px 0 16px 60px;
-      box-shadow: 2px 3px 7px 3px rgb(0 0 0 / 4%);
-    }
-
-    .chat_title1{
-      font-weight: 600;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .chat_title2{
-      font-size: 14px;
-      letter-spacing: 0px;
-      margin: 10px 0;
-      text-align: center;
-      color: #9f9f9f;
-    }
-
-    .linkFaq{
-      border: 1px solid #be3100;
-      padding: 10px 5px;
-      text-align: center;
-      border-radius: 7px;
-      width: 200px;
-      margin: auto;
-    }
-
-    .linkFaq a{
-      color: #be3100;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .backBtn{
-      float: left;
-      margin: 10px;
-      cursor: pointer;
-    }
-
-    .chatSubTitle{
-      border:1px solid #999;
-      border-radius:10px;
-      margin:0 7%;
-      padding:5px 10px;
-      text-align:center;
-      line-height:150%;
-      font-size:12px;
-      margin-bottom: 20px;
-      color: #666;
-    }
-
-    /* 입력 버튼 */
-    .inputBtn{
-      display: flex;
-    }
-    /*
-            .msg{
-                display: flex;
-            } */
-
-    /* 상대방 이름 */
-    .otherName{
-      margin: 10px;
-
-    }
-
-
-    /* 읽음 상태 숫자 */
-    .read-status{
-      position: absolute;
-      right: auto;
-      left: -18px;
-      bottom: 13px;
-      font-weight: 600;
-      color: #be3100;
-    }
-  </style>
+  <link href="css/chatRoom.css" rel="stylesheet">
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
   <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet">
-
 </head>
 <body>
-<div class="chat_info">
-  <div class="backBtn"
-       onclick="location.href=''">
-    <svg width="25" height="25" viewBox="0 0 13 20" fill="none"
-         xmlns="http://www.w3.org/2000/svg"
-         class="InnerIconstyled__Icon-sc-197h5bb-0 cYxoKX CompactHeaderstyled__BackButton-sc-1rdzle3-7 hQfOPQ"
-         defaultOpacity="1" hoveredOpacity="1" margintop="0" marginright="0"
-         marginbottom="0" marginleft="0">
-      <path fill="currentColor" fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M9.17255 16.4226C8.84711 16.748 8.31947 16.748 7.99404 16.4226L2.1607 10.5893C1.83527 10.2638 1.83527 9.73619 2.1607 9.41075L7.99404 3.57742C8.31947 3.25198 8.84711 3.25198 9.17255 3.57742C9.49799 3.90285 9.49799 4.43049 9.17255 4.75593L3.92847 10L9.17255 15.2441C9.49799 15.5695 9.49799 16.0972 9.17255 16.4226Z"></path>
-    </svg>
-  </div>
-  <img
-          src="https://trello.com/1/cards/61ea68649279785e229eb2dd/attachments/61ea6885cbefd43cdfd1638e/previews/61ea6886cbefd43cdfd163b7/download/TTEUTTO_ver.1.png">
-  <span>실시간으로 간편하게 문의하세요. <span>
-            <div class="chatClose"">×</div>
-      </span>
-      </span>
-</div>
-
-<c:choose>
-  <c:when test="">
-    <div class="chat_title">
-      <div class="chat_title1">
-              <span>
-              </span>상담사에게 문의하기
+<div class="outer">
+  <div class="chat_info">
+      <div class="backBtn"
+           onclick="location.href=''">
+          <svg width="25" height="25" viewBox="0 0 13 20" fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+               class="InnerIconstyled__Icon-sc-197h5bb-0 cYxoKX CompactHeaderstyled__BackButton-sc-1rdzle3-7 hQfOPQ"
+               defaultOpacity="1" hoveredOpacity="1" margintop="0" marginright="0"
+               marginbottom="0" marginleft="0">
+              <path fill="currentColor" fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.17255 16.4226C8.84711 16.748 8.31947 16.748 7.99404 16.4226L2.1607 10.5893C1.83527 10.2638 1.83527 9.73619 2.1607 9.41075L7.99404 3.57742C8.31947 3.25198 8.84711 3.25198 9.17255 3.57742C9.49799 3.90285 9.49799 4.43049 9.17255 4.75593L3.92847 10L9.17255 15.2441C9.49799 15.5695 9.49799 16.0972 9.17255 16.4226Z"></path>
+          </svg>
       </div>
-    </div>
-  </c:when>
-
-  <c:otherwise>
-    <div class="chat_title">
-      <div class="chat_title1">
-               <span>
-               </span>회원 문의내역
-      </div>
-    </div>
-  </c:otherwise>
-</c:choose>
-
-
-
-<div class="chat_wrap">
-  <div class="inner">
-    <div class="flex_wrap">
-
-
-      <c:if test="">
-
-        <div class="item on">
-
-          <c:forEach items="" var="msg">
-            <c:choose>
-              <c:when test="">
-                <c:set var="msgContent" value="" />
-              </c:when>
-              <c:otherwise>
-                <c:set var="msgContent"
-                       value="<b> 님이 나가셨습니다.</b>" />
-              </c:otherwise>
-            </c:choose>
-
-            <c:if test="">
-              <div class="item mymsg">
-                <div class="box">
-                  <p class="msg"></p>
-                  <!-- <span class="read-status"> 1 </span>  -->
-                  <span class="time"></span>
-                </div>
-              </div>
-            </c:if>
-
-            <c:if test="">
-              <div class="otherName"></div>
-              <div class="box">
-                <p class="msg"></p>
-                <span class="time"></span>
-              </div>
-            </c:if>
-          </c:forEach>
-        </div>
-      </c:if>
-
-      <c:if test="">
-
-        <div class="item on">
-
-
-
-        </div>
-      </c:if>
-      <%--
-      <div class="item on">
-
-        <c:forEach items="" var="msg">
-
-          <c:if test="">
-            <div class="item mymsg">
-              <div class="box">
-                <p class="msg"></p>
-                <span class="time"></span>
-              </div>
-            </div>
-          </c:if>
-
-          <c:if test="">
-            <div class="otherName">김김이</div>
-            <div class="box">
-              <p class="msg">안녕하세요😊</p>
-              <!-- <span class="read-status"> 1 </span> -->
-              <span class="time">오전 10:05</span>
-            </div>
-          </c:if>
-
-
-
-        </c:forEach>
-      </div> --%>
-
-
-    </div>
+      <span>실시간으로 간편하게 문의하세요. <span>
+              <div class="chatClose">×</div>
+        </span>
+        </span>
   </div>
-</div>
+
+  <c:choose>
+      <c:when test="">
+          <div class="chat_title">
+              <div class="chat_title1">
+                <span>
+                </span>상담사에게 문의하기
+              </div>
+          </div>
+      </c:when>
+
+      <c:otherwise>
+          <div class="chat_title">
+              <div class="chat_title1">
+                 <span>
+                 </span>회원 문의내역
+              </div>
+          </div>
+      </c:otherwise>
+  </c:choose>
 
 
-<div class="inputBtn">
+  <div class="chat_wrap">
+      <div class="inner">
+          <div class="flex_wrap">
 
-  <input type="text" class="mymsg" id="inputChatting" onkeyup="" placeholder="메시지 입력">
-  <button type="button" id="sendBtn">전송</button>
-</div>
+              <c:if test="">
+                  <div class="item on">
+                      <c:forEach items="" var="msg">
+                          <c:choose>
+                              <c:when test="">
+                                  <c:set var="msgContent" value=""/>
+                              </c:when>
+                              <c:otherwise>
+                                  <c:set var="msgContent"
+                                         value="<b> 님이 나가셨습니다.</b>"/>
+                              </c:otherwise>
+                          </c:choose>
+
+                          <c:if test="">
+                              <div class="item mymsg">
+                                  <div class="box">
+                                      <p class="msg"></p>
+                                      <!-- <span class="read-status"> 1 </span>  -->
+                                      <span class="time"></span>
+                                  </div>
+                              </div>
+                          </c:if>
+
+                          <c:if test="">
+                              <div class="otherName"></div>
+                              <div class="box">
+                                  <p class="msg"></p>
+                                  <span class="time"></span>
+                              </div>
+                          </c:if>
+                      </c:forEach>
+                  </div>
+              </c:if>
+
+              <c:if test="">
+                  <div class="item on">
+                  </div>
+              </c:if>
+
+              <div class="item on">
+                  <c:forEach items="" var="msg">
+                      <c:if test="">
+                          <div class="item mymsg">
+                              <div class="box">
+                                  <p class="msg"></p>
+                                  <span class="time"></span>
+                              </div>
+                          </div>
+                      </c:if>
+
+                      <c:if test="">
+                          <div class="otherName">김김이</div>
+                          <div class="box">
+                              <p class="msg">안녕하세요😊</p>
+                              <!-- <span class="read-status"> 1 </span> -->
+                              <span class="time">오전 10:05</span>
+                          </div>
+                      </c:if>
+                  </c:forEach>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <div class="inputBtn">
+      <input type="text" class="mymsg" id="inputChatting" onkeyup="" placeholder="메시지 입력">
+      <button type="button" id="sendBtn">전송</button>
+  </div>
 </div>
 
 

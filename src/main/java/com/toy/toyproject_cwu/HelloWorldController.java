@@ -22,4 +22,6 @@ public class HelloWorldController {
 
     @RequestMapping("login.us")
     public String login(Model model){return "/views/user/login";}
+
+
 }
